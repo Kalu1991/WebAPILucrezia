@@ -41,7 +41,6 @@ namespace WebApiProject.Controllers
         [HttpGet("{id}", Name = "GetBiglietto")]
         public IActionResult GetById(int id)
         {
-            var a = 1;
             var biglietto = _db.Biglietti.FirstOrDefault(b => b.ID == id);
             if (biglietto == null)
                 return NotFound();
